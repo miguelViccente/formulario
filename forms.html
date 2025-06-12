@@ -1,14 +1,18 @@
-<!DOCTYPE html>
+OCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formularios</title>
+    <title>Formulario</title>
 </head>
 <body>
-    <form action="salvar.html" method="post" onsubmit="return ValidarFormulario()">
+    <form>
         <label>Cep</label>
-        <input type="text" name="cep" id="cep" class="campo" /><br><br>
+        <input type="text" name="cep" id="cep" class="campo" />
+        <button id="" type="button" onclick="Clicar()">
+            Consultar o cep
+        </button>
+        <br><br>
         <label>Endereço</label>
         <input type="text" name="endereco" id="endereco" class="campo" /> <br><br>
         <label>Número</label>
@@ -25,65 +29,26 @@
     </form>
 
     <script>
-        function ValidarFormulario()
-        {
-            var cep= document.getElementById('cep')
-            var endereco= document.getElementById('endereco')
-            var numero= document.getElementById('numero')
-            var bairro= document.getElementById('bairro')
-            var cidade= document.getElementById('cidade')
-            var estado= document.getElementById('estado')
-            if (cep.value == "")
-            {
-                cep.style.border = '1px solid red';
-                echo ("O campo 'Cep' deve ser preenchido");
-                return false
-            }
-
-            if (endereco.value == "")
-            {
-                endereco.style.border = '1px solid red';
-                echo ("O campo 'Endereço' deve ser preenchido");
-                return false
-            }
-
-
-            if (numero.value == "")
-            {
-                numero.style.border = '1px solid red';
-                echo ("O campo 'Numero' deve ser preenchido");
-                return false
-            }
-
-
-            if (bairro.value == "")
-            {
-                bairro.style.border = '1px solid red';
-                echo ("O campo 'Bairro' deve ser preenchido");
-                return false
-            }
-
-
-            if (cidade.value == "")
-            {
-                cidade.style.border = '1px solid red';
-                echo("O campo 'Cidade' deve ser preenchido");
-                return false
-            }
-
-            if (estado.value == "")
-            {
-                estado.style.border = '1px solid red';
-                echo("O campo 'Estado' deve ser preenchido");
-                return false
-            }
-
-
-
+    function Clicar()
+    {    
+        var cep = document.getElementById("cep")
+        var url = "https://viacep.com.br/ws/"+cep.value+"/json/"
+        fetch(url)
+        .then((resposta)=> resposta.json())
+        .then((dados) => {
+            var cidade  = document.getElementById("cidade")
+            var estado  = document.getElementById("estado")
+            var endereco  = document.getElementById("endereco")
+            var bairro  = document.getElementById("bairro")
+            cidade.value = dados.localidade
+            estado.value = dados.estado
+            bairro.value = dados.bairro
+            endereco.value = dados.logradouro
             
-        }
-
+        })
+    }
     </script>
- 
+
+
 </body>
-</html
+</html>
