@@ -3,38 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokédex</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="pokedex.css">
+    <script defer src="pokedex.js"></script>
+   
+    <title>Document</title>
 </head>
 <body>
-    <div id="containers">
-        <div class="caixa1">
-            <!-- Botões coloridos no topo -->
-            <div id="botoes-topo">
-                <div class="botao red"></div>
-                <div class="botao yellow"></div>
-                <div class="botao green"></div>
-            </div>
-
-            <div id="botaoazul"></div>
-            <hr><br>
-            <center>
-                nº pokemon
-                <div id="tela">
-                    <div id="imgpokemon">img pokemon</div>
-                </div>
-                nome pokemon
-            </center>
+   
+ 
+    <main>
+       
+       
+        <img src="#" id="pokemon">
+       
+ 
+       
+ 
+        <h1 class="nomenum">
+            <span class="pokenum"></span>
+            <span class="pokenome"></span>
+        </h1>
+ 
+        <form id="formulario">
+            <input type="search"
+            id="pesquisarpokemon"
+            placeholder="Procurar Pokémon!"
+            required>
+        </form>
+ 
+        <div class="botoes">
+            <button  class="botao btn-prev"><--</button>
+            <button  class="botao bnt-next">--></button>
         </div>
-        
-
-        <div class="caixa2">
-            <center>
-                info do pokemon
-                <div id="telainfo">Altura, peso, tipo...</div>
-            </center>
+        <div id="pokedex">
+        <img src="https://pokedexbydinas.netlify.app/pokedex.png" id="pokedexinterface">
+        <div id="dirpokedex">
+            div
         </div>
-    </div>
+        </div>
+    </main>
+ 
+   
 </body>
 </html>
