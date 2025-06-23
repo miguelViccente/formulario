@@ -8,7 +8,7 @@
 }
 body {
   text-align: center;
-  background: linear-gradient(to bottom, #f56ad7, #fff);
+  background: linear-gradient(to bottom, #2963cf, #fff);
   min-height: 100vh;
 }
  
@@ -103,12 +103,13 @@ button:active{
     background-color: rgb(211, 10, 64);
     height: 500px;
     width:350px;
-    display: flex;
+    
     margin-top: 22.5%;
     z-index: 1;
     border-radius: 10px;
     border: solid 2px rgb(84, 11, 23);
     box-shadow: inset -2px -2px rgb(84, 11, 23), inset -10px -10px rgb(142, 6, 42);
+    font-size: 10px;
    
 }
 #pokedex{
@@ -116,5 +117,24 @@ button:active{
   justify-content: center;
   align-items: flex-start;
 }
- 
- 
+
+#teladirpokedex{
+    width: 250px;
+    height: 450px;
+    background-color: rgb(227, 227, 227);
+    border: solid 2px rgb(41, 41, 41);
+    border-radius: 10%;
+    box-shadow: inset 4px -4px rgb(77, 77, 77);
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+#img-evolucao {
+    width: 100px;        
+    margin-top: 100px;    
+    border-radius: 10px; 
+    display: block;      
+    margin-left: auto;   
+    margin-right: auto;
+  }
