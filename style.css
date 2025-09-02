@@ -1,235 +1,229 @@
+/* --- Estilo geral da página --- */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #191414;
+    background-color: #121212; /* Fundo mais confortável pro olho */
+    color: #eee;
 }
 
+/* Títulos */
 h1, h3 {
     font-weight: bold;
 }
 
+/* Parágrafos */
 p {
     line-height: 1.6;
-    color: #333;
+    color: #ddd;
 }
 
+/* --- Tyler, The Creator --- */
 .tyler {
-    background-color: #98FF98; 
+    background: linear-gradient(135deg, #FF6F91, #FFC75F);
     padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(255,111,145,0.4);
 }
-
 .tyler h1 {
     font-family: 'Poppins', sans-serif;
-    color: #FF4C00;
+    color: #2C003E;
+    text-shadow: 1px 1px 5px #fff7;
 }
-
 .tyler h3 {
     font-family: 'Poppins', sans-serif;
-    color: #333;
+    color: #3A0057;
 }
-
 .tyler p {
     font-family: 'Roboto', sans-serif;
-    color: #333;
+    color: #2C003E;
 }
 
+/* --- Kendrick Lamar --- */
 .kendrick {
-    background-color: #FFD700;
+    background-color: #111;
+    border-left: 8px solid #FFD700;
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
-
 .kendrick h1 {
     font-family: 'Bebas Neue', sans-serif;
-    color: #1A1A1A;
+    color: #FFD700;
+    letter-spacing: 2px;
 }
-
 .kendrick h3 {
     font-family: 'Oswald', sans-serif;
-    color: #1A1A1A;
+    color: #fff;
 }
-
 .kendrick p {
     font-family: 'Arial', sans-serif;
-    color: #333;
+    color: #ccc;
 }
 
+/* --- Mac DeMarco --- */
 .mac-demarco {
-    background-color: #A8C7A5; 
+    background-color: #C9E4C5;
     padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #A8C7A5;
 }
-
 .mac-demarco h1 {
     font-family: 'Lora', serif;
-    color: #6B8E23;
+    color: #4B7447;
 }
-
 .mac-demarco h3 {
     font-family: 'Lora', serif;
-    color: #333;
+    color: #355E3B;
 }
-
 .mac-demarco p {
     font-family: 'Roboto', sans-serif;
-    color: #333;
+    color: #2E4A23;
 }
 
+/* --- SZA --- */
 .sza {
-    background-color: #FBB2A3; 
+    background-color: #FDEDEC;
     padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border: 1px solid #E57373;
 }
-
 .sza h1 {
     font-family: 'Quicksand', sans-serif;
-    color: #9B1B30;
+    color: #D32F2F;
+    font-weight: 700;
 }
-
 .sza h3 {
     font-family: 'Quicksand', sans-serif;
-    color: #333;
+    color: #B71C1C;
 }
-
 .sza p {
     font-family: 'Roboto', sans-serif;
-    color: #333;
+    color: #4E342E;
 }
 
+/* --- A$AP Rocky --- */
 .asap-rocky {
-    background-color: #D4AF37;
+    background: linear-gradient(90deg, #D4AF37, #F0E68C);
     padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 15px #D4AF37;
 }
-
 .asap-rocky h1 {
     font-family: 'Bebas Neue', sans-serif;
-    color: #1A1A1A;
+    color: #3B2F2F;
+    letter-spacing: 3px;
 }
-
 .asap-rocky h3 {
     font-family: 'Oswald', sans-serif;
-    color: #1A1A1A;
+    color: #4B3B3B;
 }
-
 .asap-rocky p {
     font-family: 'Arial', sans-serif;
-    color: #333;
+    color: #3B2F2F;
 }
 
+/* --- Tame Impala --- */
 .tame-impala {
-    background-color: #6A0DAD; 
+    background: radial-gradient(circle at center, #7E57C2, #311B92);
     padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    color: #E1BEE7;
 }
-
 .tame-impala h1 {
     font-family: 'Playfair Display', serif;
     color: #FFD700;
 }
-
 .tame-impala h3 {
     font-family: 'Playfair Display', serif;
-    color: #fff;
+    color: #E1BEE7;
 }
-
 .tame-impala p {
     font-family: 'Lora', serif;
-    color: #fff;
+    color: #D1C4E9;
 }
 
+/* --- Steve Lacy --- */
 .steve-lacy {
-    background-color: #2F4F4F;
+    background-color: #2E4053;
     padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    color: #A3D2CA;
 }
-
 .steve-lacy h1 {
     font-family: 'Bebas Neue', sans-serif;
-    color: #98FF98; 
+    color: #A3D2CA;
 }
-
 .steve-lacy h3 {
     font-family: 'Raleway', sans-serif;
-    color: #EAEAEA; 
+    color: #D4F1F4;
 }
-
 .steve-lacy p {
     font-family: 'Quicksand', sans-serif;
-    color: #EAEAEA;
+    color: #D4F1F4;
 }
 
+/* --- Frank Ocean --- */
 .frank-ocean {
-    background-color: #6F4F1E; 
+    background: linear-gradient(135deg, #FF6E7F, #BFE9FF);
     padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
 }
-
 .frank-ocean h1 {
     font-family: 'Poppins', sans-serif;
-    color: #FF6F61; 
+    color: #4A148C;
 }
-
 .frank-ocean h3 {
     font-family: 'Poppins', sans-serif;
-    color: #333;
+    color: #311B92;
 }
-
 .frank-ocean p {
     font-family: 'Roboto', sans-serif;
-    color: #333;
+    color: #311B92;
 }
 
+/* --- PinkPantheress --- */
 .pink-pantheress {
-    background-color: #D88FD3;
+    background-color: #E3B0FF;
     padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 8px #E3326D;
 }
-
-.pink-pantheress h1 {
-    font-family: 'Quicksand', sans-serif;
-    color: #E3326D; 
-}
-
+.pink-pantheress h1,
 .pink-pantheress h3 {
     font-family: 'Quicksand', sans-serif;
-    color: #E3326D;
+    color: #9C27B0;
 }
-
 .pink-pantheress p {
     font-family: 'Lora', serif;
-    color: #333;
+    color: #6A1B9A;
 }
 
+/* --- MF Doom --- */
 .mf-doom {
-    background-color: #A9A9A9; 
+    background-color: #2E2E2E;
     padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border-left: 5px solid #FF5722;
 }
-
 .mf-doom h1 {
     font-family: 'Bebas Neue', sans-serif;
-    color: #333;
+    color: #FF5722;
 }
-
 .mf-doom h3 {
     font-family: 'Oswald', sans-serif;
-    color: #333;
+    color: #FF8A50;
 }
-
 .mf-doom p {
     font-family: 'Roboto', sans-serif;
-    color: #333;
+    color: #bbb;
 }

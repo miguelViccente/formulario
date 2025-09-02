@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Bebas+Neue&family=Lora&family=Oswald&family=Quicksand&family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet" />
     <link href="style.css" rel="stylesheet">
     <title>Tabela</title>
 </head>
@@ -119,4 +119,94 @@
         </div>
       </div>
 
+
+      <div class="container">
+
+        <div class="card mt-3">
+            <h5 class="card-header">
+                Pesquisa de Usuários
+            </h5>
+            <div class="card-body">
+
+              <div class="row">
+                <div class="col-2">
+                    <a href="#" class="btn btn-success">
+                        Cadastrar novo
+                    </a>
+                </div>
+                <div class="col-8">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Faça sua pesquisa aqui">
+                        <button class="btn btn-primary" type="button" >Pesquisar</button>
+                      </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        <div class="card mt-3">
+            <h5 class="card-header">
+                Dados dos Usuários
+            </h5>
+            <div class="card-body">
+
+                <table class="table table-bordeded table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Posição</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Albúm</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="CorpoTabela" >
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>  
+ 
+
+    </div>
+
+
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+       
+        fetch('http://192.168.130.130:8081/api/usuarios.php')
+            .then(response => response.json())
+            .then(dados => {
+                const tabela = document.getElementById("CorpoTabela")
+
+                dados.forEach(item => {
+                    const linha = document.createElement('tr');
+
+                    /*
+                    "ID": "20",
+                    "LOGIN": "natasha.k",
+                    "NOME": "Natasha Klein",
+                    "EMAIL": "natasha.k@example.com",
+                    "SENHA": "nklein!99",
+                    "ATIVO": "1"
+                */
+                    linha.innerHTML = `
+                        <td>${item.ID}</td>
+                        <td>${item.LOGIN}</td>
+                        <td>${item.NOME}</td>
+                        <td>${item.EMAIL}</td>
+                        <td>${item.ATIVO}</td>
+                        <td></td>
+                    `;
+
+                    tabela.appendChild(linha);
+                });
+            })
+            .catch(error => {
+                console.error('Erro ao buscar dados:', error);
+            });
 
