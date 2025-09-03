@@ -1,229 +1,303 @@
-/* --- Estilo geral da página --- */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Fundo mais confortável pro olho */
-    color: #eee;
+    background-color: #121212;
+    color: #EAEAEA;
 }
 
-/* Títulos */
-h1, h3 {
+
+.navbar {
+    background-color: #1DB954 !important;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: white !important;
+}
+
+.navbar .nav-link.active {
     font-weight: bold;
+    text-decoration: underline;
 }
 
-/* Parágrafos */
-p {
-    line-height: 1.6;
-    color: #ddd;
+
+.btn {
+    border: none;
 }
 
-/* --- Tyler, The Creator --- */
-.tyler {
-    background: linear-gradient(135deg, #FF6F91, #FFC75F);
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 8px rgba(255,111,145,0.4);
-}
-.tyler h1 {
-    font-family: 'Poppins', sans-serif;
-    color: #2C003E;
-    text-shadow: 1px 1px 5px #fff7;
-}
-.tyler h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #3A0057;
-}
-.tyler p {
-    font-family: 'Roboto', sans-serif;
-    color: #2C003E;
+.btn-outline-primary {
+    border-color: #1DB954;
+    color: #1DB954;
 }
 
-/* --- Kendrick Lamar --- */
-.kendrick {
-    background-color: #111;
-    border-left: 8px solid #FFD700;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 25px;
+.btn-outline-primary:hover {
+    background-color: #1DB954;
+    color: white;
 }
-.kendrick h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    color: #FFD700;
-    letter-spacing: 2px;
-}
-.kendrick h3 {
-    font-family: 'Oswald', sans-serif;
+
+.btn-success {
+    background-color: #1DB954;
     color: #fff;
 }
-.kendrick p {
-    font-family: 'Arial', sans-serif;
-    color: #ccc;
+
+.btn-warning {
+    background-color: #F0AD4E;
+    color: #fff;
 }
 
-/* --- Mac DeMarco --- */
+.btn-danger {
+    background-color: #D9534F;
+    color: #fff;
+}
+
+.table {
+    background-color: #1e1e1e;
+    color: #EAEAEA;
+    border-radius: 5px;
+}
+
+.table th {
+    background-color: #2a2a2a;
+    color: #EAEAEA;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #2a2a2a;
+}
+
+.card {
+    background-color: #1e1e1e;
+    color: #EAEAEA;
+    border: none;
+}
+
+.tyler {
+    background-color: #fddde6;
+    color: #2C003E;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+.tyler h1, .tyler h3 {
+    color: #2C003E;
+}
+.tyler p {
+    color: #3a2c4d;
+}
+
+.kendrick {
+    background-color: #111111;
+    border-left: 6px solid #FFD700;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+.kendrick h1 {
+    color: #FFD700;
+    letter-spacing: 1px;
+}
+.kendrick h3, .kendrick p {
+    color: #EAEAEA;
+}
+
 .mac-demarco {
     background-color: #C9E4C5;
+    border: 1px solid #A8C7A5;
     padding: 20px;
     border-radius: 12px;
-    margin-bottom: 25px;
-    border: 1px solid #A8C7A5;
-}
-.mac-demarco h1 {
-    font-family: 'Lora', serif;
-    color: #4B7447;
-}
-.mac-demarco h3 {
     font-family: 'Lora', serif;
     color: #355E3B;
 }
+.mac-demarco h1, .mac-demarco h3 {
+    color: #355E3B;
+}
 .mac-demarco p {
-    font-family: 'Roboto', sans-serif;
     color: #2E4A23;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* --- SZA --- */
 .sza {
     background-color: #FDEDEC;
+    border: 1px solid #E57373;
     padding: 20px;
     border-radius: 15px;
-    margin-bottom: 25px;
-    border: 1px solid #E57373;
+    font-family: 'Quicksand', sans-serif;
+    color: #4E342E;
 }
 .sza h1 {
-    font-family: 'Quicksand', sans-serif;
     color: #D32F2F;
-    font-weight: 700;
 }
 .sza h3 {
-    font-family: 'Quicksand', sans-serif;
     color: #B71C1C;
-}
-.sza p {
-    font-family: 'Roboto', sans-serif;
-    color: #4E342E;
 }
 
 /* --- A$AP Rocky --- */
 .asap-rocky {
-    background: linear-gradient(90deg, #D4AF37, #F0E68C);
+    background-color: #F5DEB3;
     padding: 20px;
     border-radius: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 0 15px #D4AF37;
+    font-family: 'Oswald', sans-serif;
+    color: #3B2F2F;
 }
 .asap-rocky h1 {
     font-family: 'Bebas Neue', sans-serif;
     color: #3B2F2F;
-    letter-spacing: 3px;
 }
 .asap-rocky h3 {
-    font-family: 'Oswald', sans-serif;
     color: #4B3B3B;
 }
-.asap-rocky p {
-    font-family: 'Arial', sans-serif;
-    color: #3B2F2F;
-}
 
-/* --- Tame Impala --- */
 .tame-impala {
-    background: radial-gradient(circle at center, #7E57C2, #311B92);
+    background-color: #311B92;
     padding: 20px;
     border-radius: 15px;
-    margin-bottom: 25px;
+    font-family: 'Playfair Display', serif;
     color: #E1BEE7;
 }
 .tame-impala h1 {
-    font-family: 'Playfair Display', serif;
     color: #FFD700;
 }
 .tame-impala h3 {
-    font-family: 'Playfair Display', serif;
     color: #E1BEE7;
 }
 .tame-impala p {
-    font-family: 'Lora', serif;
     color: #D1C4E9;
+    font-family: 'Lora', serif;
 }
 
-/* --- Steve Lacy --- */
 .steve-lacy {
     background-color: #2E4053;
     padding: 20px;
     border-radius: 15px;
-    margin-bottom: 25px;
+    font-family: 'Raleway', sans-serif;
     color: #A3D2CA;
 }
 .steve-lacy h1 {
     font-family: 'Bebas Neue', sans-serif;
-    color: #A3D2CA;
 }
-.steve-lacy h3 {
-    font-family: 'Raleway', sans-serif;
-    color: #D4F1F4;
-}
-.steve-lacy p {
-    font-family: 'Quicksand', sans-serif;
+.steve-lacy h3, .steve-lacy p {
     color: #D4F1F4;
 }
 
-/* --- Frank Ocean --- */
 .frank-ocean {
-    background: linear-gradient(135deg, #FF6E7F, #BFE9FF);
+    background-color: #BFE9FF;
     padding: 20px;
     border-radius: 15px;
-    margin-bottom: 25px;
+    font-family: 'Poppins', sans-serif;
+    color: #311B92;
 }
 .frank-ocean h1 {
-    font-family: 'Poppins', sans-serif;
     color: #4A148C;
 }
-.frank-ocean h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #311B92;
-}
-.frank-ocean p {
+.frank-ocean h3, .frank-ocean p {
     font-family: 'Roboto', sans-serif;
-    color: #311B92;
 }
 
-/* --- PinkPantheress --- */
 .pink-pantheress {
     background-color: #E3B0FF;
     padding: 20px;
     border-radius: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 0 8px #E3326D;
-}
-.pink-pantheress h1,
-.pink-pantheress h3 {
     font-family: 'Quicksand', sans-serif;
+    color: #6A1B9A;
+}
+.pink-pantheress h1, .pink-pantheress h3 {
     color: #9C27B0;
 }
 .pink-pantheress p {
     font-family: 'Lora', serif;
-    color: #6A1B9A;
 }
 
-/* --- MF Doom --- */
 .mf-doom {
     background-color: #2E2E2E;
+    border-left: 5px solid #FF5722;
     padding: 20px;
     border-radius: 15px;
-    margin-bottom: 25px;
-    border-left: 5px solid #FF5722;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #bbb;
 }
 .mf-doom h1 {
-    font-family: 'Bebas Neue', sans-serif;
     color: #FF5722;
 }
 .mf-doom h3 {
-    font-family: 'Oswald', sans-serif;
     color: #FF8A50;
 }
-.mf-doom p {
-    font-family: 'Roboto', sans-serif;
-    color: #bbb;
+
+.tyler,.kendrick,.mac-demarco,.sza,.asap-rocky,.tame-impala,.steve-lacy,.frank-ocean,.pink-pantheress,.mf-doom {
+    margin-bottom: 30px;
 }
+
+/* Estilo geral da tabela */
+/* Estilo geral da tabela Spotify Style */
+.table {
+    background-color: #121212; /* Preto escuro (fundo) */
+    color: #fff; /* Texto branco */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-collapse: separate;
+    border-spacing: 0 12px; /* Espaçamento vertical entre linhas */
+  }
+  
+  /* Cabeçalho da tabela */
+  .table thead tr {
+    background-color: #1DB954; /* Verde Spotify */
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .table thead th {
+    padding: 12px 20px;
+    border: none;
+  }
+  
+  /* Corpo da tabela */
+  .table tbody tr {
+    background-color: #282828; /* Cinza escuro */
+    transition: background-color 0.3s ease;
+    display: table-row; /* Corrige problema do MF DOOM */
+  }
+  
+  /* Células da tabela */
+  .table tbody td {
+    padding: 15px 20px;
+    border: none;
+    vertical-align: middle;
+  }
+  
+  /* Hover nas linhas */
+  .table tbody tr:hover {
+    background-color: #1DB954;
+    color: #121212;
+    cursor: pointer;
+  }
+  
+  /* Alinhamento da coluna de posição */
+  .table tbody td:nth-child(3) {
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  /* Alinhamento da duração */
+  .table tbody td:nth-child(4) {
+    text-align: center;
+  }
+  
+  /* Bordas arredondadas nas células da esquerda e direita */
+  .table tbody td:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .table tbody td:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+  
