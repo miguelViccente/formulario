@@ -301,3 +301,43 @@ body {
     }
   }
   
+  /* --- Estilo específico para Cadastro --- */
+
+.container {
+    /* Caso queira margens específicas, pode colocar aqui */
+  }
+  
+  .row {
+    margin-top: 15px;
+  }
+  
+  img {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+  
+  .banner {
+  
+  }
+  
+  body {
+    background-color: #282828;
+  }
+  
+  .form-input {
+    padding: 1rem;
+    color: #212529; 
+    background-color: #f8f9fa; 
+    border: 1px solid #6c757d; 
+    border-radius: 0.375rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  
+  .p-3.text-dark-emphasis.bg-light-subtle.border.border-dark-subtle.rounded-3 {
+    background-color: #f8f9fa !important; /* remove ou comente */
+    color: #212529 !important;
+}
