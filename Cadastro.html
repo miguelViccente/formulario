@@ -1,81 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cadastro de Música</title>
+  <title>Cadastro com Modal</title>
   <link href="bootstrap/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Bebas+Neue&family=Lora&family=Oswald&family=Quicksand&family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
 </head>
-
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">BillBoard</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="biblioteca.html">BillBoard</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="biblioteca.html">Artistas</a>
+          <li class="nav-item"><a class="nav-link" href="biblioteca.html">Artistas</a></li>
           <li class="nav-item"><a class="nav-link" href="BillBoard.html">Tabela</a></li>
-          <a class="nav-link active" aria-current="page" href="Cadastro.html">Cadastrar Música</a>
+          <li class="nav-item"><a class="nav-link active" href="Cadastro.html">Cadastrar Música</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="container cadastro-container">
-    <h3>Cadastro de Música</h3>
-    <form>
-      <div class="row">
-        <div class="col-6">
-          <label for="nomeMusica" class="form-label">Nome da Música</label>
-          <input type="text" id="nomeMusica" class="form-input" placeholder="Ex: Blinding Lights" required />
-        </div>
-        <div class="col-6">
-          <label for="artista" class="form-label">Artista</label>
-          <select id="artista" class="form-select" required>
-            <option value="" disabled selected>Escolha um artista</option>
-            <option value="Tyler, The Creator">Tyler, The Creator</option>
-            <option value="Kendrick Lamar">Kendrick Lamar</option>
-            <option value="Mac DeMarco">Mac DeMarco</option>
-            <option value="SZA">SZA</option>
-            <option value="A$AP Rocky">A$AP Rocky</option>
-            <option value="Tame Impala">Tame Impala</option>
-            <option value="Steve Lacy">Steve Lacy</option>
-            <option value="Frank Ocean">Frank Ocean</option>
-            <option value="Pink Pantheress">Pink Pantheress</option>
-            <option value="MF DOOM">MF DOOM</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-4">
-          <label for="genero" class="form-label">Gênero</label>
-          <input type="text" id="genero" class="form-input" placeholder="Ex: R&B" required />
-        </div>
-        <div class="col-4">
-          <label for="ano" class="form-label">Ano de Lançamento</label>
-          <input type="number" id="ano" class="form-input" min="1900" max="2099" step="1" placeholder="Ex: 2020" required />
-        </div>
-        <div class="col-4">
-          <label for="duracao" class="form-label">Duração (min)</label>
-          <input type="text" id="duracao" class="form-input" placeholder="Ex: 3:45" required />
-        </div>
-      </div>
-
-      <div class="row mt-3">
-        <div class="col-12 d-flex justify-content-end gap-3">
-          <button type="reset" class="btn btn-warning">Limpar</button>
-          <button type="submit" class="btn btn-success">Enviar Cadastro</button>
-        </div>
-      </div>
-    </form>
+  <div class="container text-center mt-5">
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#cadastroModal">
+      Cadastrar Nova Música
+    </button>
   </div>
+
+  <div class="modal fade" id="cadastroModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Cadastro de Música</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="nomeMusica" class="form-label">Nome da Música</label>
+                <input type="text" id="nomeMusica" class="form-input" placeholder="Ex: Blinding Lights" required />
+              </div>
+              <div class="col-md-6">
+                <label for="artista" class="form-label">Artista</label>
+                <select id="artista" class="form-select" required>
+                  <option disabled selected>Escolha um artista</option>
+                  <option>Tyler, The Creator</option>
+                  <option>Kendrick Lamar</option>
+                  <option>Mac DeMarco</option>
+                  <option>SZA</option>
+                  <option>A$AP Rocky</option>
+                  <option>Tame Impala</option>
+                  <option>Steve Lacy</option>
+                  <option>Frank Ocean</option>
+                  <option>Pink Pantheress</option>
+                  <option>MF DOOM</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-4">
+                <label for="genero" class="form-label">Gênero</label>
+                <input type="text" id="genero" class="form-input" placeholder="Ex: R&B" required />
+              </div>
+              <div class="col-md-4">
+                <label for="ano" class="form-label">Ano</label>
+                <input type="number" id="ano" class="form-input" placeholder="Ex: 2020" required />
+              </div>
+              <div class="col-md-4">
+                <label for="duracao" class="form-label">Duração</label>
+                <input type="text" id="duracao" class="form-input" placeholder="Ex: 3:45" required />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="reset" class="btn btn-warning">Limpar</button>
+          <button type="submit" class="btn btn-success">Cadastrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <script src="bootstrap/bootstrap.bundle.min.js"></script>
 </body>
