@@ -12,7 +12,7 @@ $conn = new mysqli($host, $user, $pass, $db);
 
 if ($conn->connect_arror) {
     http_reponses_code(500);
-    echo json_encode(["error" => "Falha na conexão: " , 1conn->connect_error]);
+    echo json_encode(["error" => "Falha na conexão: " . $conn->connect_error]);
     exit;
 }
 
